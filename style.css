@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+body{
+    font-family: 'Poppins', sans-serif;
+} 
+/* barre de navigation */
+nav{ 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 8%;
+    height: 70px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); 
+    margin-bottom: 5px;
+} 
+nav .onglets{ 
+    align-items: center;
+}
+nav .onglets a{
+    text-decoration: none;
+    color: #444;
+    margin-right: 10px; 
+    padding-bottom: 2px;
+} 
+nav h1{
+    font-family: 'Cookie', cursive;
+    font-size: 45px;
+}
+
+nav .onglets a:hover{
+    color: crimson;
+}
+p i:hover{
+    color: crimson;
+}
+                /* header avec le images */ 
+                header{
+                    padding: 5px;
+                }
+#photoarray{
+    display: grid;
+    flex-wrap: wrap;
+    grid-gap: .5em;
+    grid-template-areas:
+     " photo1 photo2 photo3"
+     " photo1 photo4 photo5";
+     grid-template-columns: 1fr 20% 20%;
+     margin-top: 2px;
+}
+
+#photoarray > div:first-child { 
+    grid-area: photo1;
+    height: 600px;    
+}
+#photoarray a{
+    color: #111111;
+    text-decoration: none;
+    font-size: 15px;
+    border-bottom: 2px solid crimson;
+    padding-bottom: 2px;
+}
+#photoarray a:hover{
+    color: crimson;
+}
+#photoarray p{
+    color: #747373;
+    font-size: 14px;
+}
+.item1{
+    background-image: url(images/photo1.jpg); 
+    
+} 
+.item2{
+    background-image: url(images/photo2.jpg);  
+} 
+.item3{
+    background-image: url(images/photo3.jpg); 
+} 
+.item4{
+    background-image: url(images/photo4.avif);   
+}
+.item5{
+    background-image: url(images/photo5.avif);   
+} 
+.set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+#photoarray .item-text h4{
+    font-family: 'Cookie', cursive;
+    margin-top: 120px;
+    font-size: 30px;
+}
+.item-text1{
+    margin-top: 210px;
+
+}
+.item-text1 h1{
+    font-family: 'Cookie', cursive;
+    color: #111111;
+    margin-bottom: 5px;
+    font-size: 70px;
+}
+
+                       /* partie produits */ 
+.content{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding-left: 25px ;
+    padding-right: 25px;
+}
+
+div .sec-2{
+   display: flex;
+    text-align: right;  
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+} 
+div .sec-2 a{
+    text-decoration: none;
+    color: #444; 
+     padding-bottom: 2px;
+}
+
+div .sec-2 a:hover{
+    color: crimson;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}  
+.col-4{
+    flex-basis: 25%;
+    min-width: 100px;
+    padding: 10px; 
+    transition: transform 0.3s ;
+}
+.col-4 img{
+    width: 100%;
+    height: 350px;
+}
+.col-4:hover{
+    transform: translateY(-10px);
+}
+.rating .fa{
+    color: #f2fa0f;
+}
+.fa{
+    justify-content: space-between;
+    padding: 5px;
+}
+                            /* le slider */
+.slide {
+   background-image: url(images/6.jpg);
+    height: 450px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 25px; 
+    align-items: center; 
+}                            
+.slider-1{
+    max-width: 600px;
+    margin: 100px auto;
+    overflow: hidden;
+    
+}
+.slider-1 .slider{
+    display: flex;
+    animation: slider-1 12s infinite  ease-in-out;
+}
+.slider-1 p{
+    flex-shrink: 0;
+    padding: 72px 0;
+    width: 100%;
+    text-align: center ;
+    font-size: 40px;
+
+}
+
+@keyframes slider-1 {
+    0%{
+        transform:translateX(0);
+    }
+    10%{
+        transform:translateX(0);
+    }
+   
+    33%{
+        transform:translateX(-600px);
+    }
+    66%{
+        transform:translateX(-1200px);
+    } 
+    100%{
+        transform:translateX(0);
+    }
+}
+                     /* LA GALERIE */
+.galerie{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 1300px;
+    margin: 70px auto 0; 
+} 
+.galerie h1{
+    font-size: 20px;
+    border-bottom: 2px solid crimson;
+    padding-bottom: 2px;
+    
+}
+.items{ 
+   
+    margin: 30px;
+    overflow: hidden;
+    flex-shrink: 0;   
+} 
+.items .text{ 
+      flex-wrap: wrap;    
+}                 
+.items img{
+    height: auto; 
+}
+.rating2{
+    display: inline-block; 
+    line-height:  18px; 
+    flex-wrap: wrap;   
+}
+.rating2 .fa{
+    color: #f2fa0f; 
+    padding: 0;
+    font-size: 10px;   
+}
+                   /* services */ 
+.services{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    flex-direction: row;
+    margin: auto; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    
+} 
+
+.services .fa{
+    color: crimson  ;
+    font-size: 40px;
+}  
+.services h6{
+    color: #111111;
+    font-size: 20px;
+}                 
+                      /* partie pied de page */
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.pied img{ 
+     max-width: 224.8px; 
+    height: 300px;  
+     display: flex ;
+    float: left; 
+}
+/* le footer */
+.contact-info{
+    max-width: 1150px;
+    margin: 20px auto;
+    padding-left: 5px ;
+    padding-right: 5px;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+.fourth-info form{
+    margin: 20px 0;
+} 
+.fourth-info form input{
+    height: 40px;
+    width: 18vw;
+    border-radius: 20px;
+    border: #747373 1px solid;
+}
+.fourth-info form button{
+    height: 40px;
+    width: 5rem;
+    background-color: crimson;
+    border: crimson;
+    border-radius: 20px;
+    color: #ffff;
+}
+.end-text{
+    text-align: center;
+    padding: 20px;
+}
+.end-text p{
+    text-transform: capitalize;
+}
